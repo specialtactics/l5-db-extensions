@@ -3,7 +3,7 @@
 use SCM\L5DB\Database\Schema\Blueprint;
 use SCM\L5DB\Database\Migrations\Migration;
 
-class CreateDummyClassTable extends Migration
+class DummyClass extends Migration
 {
     const TABLE_NAME = 'DummyTable';
 
@@ -24,7 +24,6 @@ class CreateDummyClassTable extends Migration
             $table->updatedTimeStamp('updated_at');
 
             // Keys
-            $table->primary('_id');
 			$table->index('_uuid');
 
 			// Foreign Keys
