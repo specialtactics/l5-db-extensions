@@ -1,0 +1,40 @@
+<?php
+
+use SCM\L5DB\Database\Schema\Blueprint;
+use SCM\L5DB\Database\Migrations\Migration;
+
+class CreateDummyClassTable extends Migration
+{
+    const TABLE_NAME = 'DummyTable';
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create(static::TABLE_NAME, function (Blueprint $table) {
+            $table->increments('_id');
+            $table->uuid('_uuid');
+
+            $table->dateTime('created_at');
+            $table->updatedTimeStamp('updated_at');
+            $table->primaryKey('_id');
+			$table->index('_uuid');
+        });
+
+        // Triggers
+        $this->createDateTimeTrigger(static::TABLE_NAME, 'created_at');
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop(static::TABLE_NAME);
+    }
+}

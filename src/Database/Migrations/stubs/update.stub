@@ -1,0 +1,31 @@
+<?php
+
+use SCM\L5DB\Database\Schema\Blueprint;
+use SCM\L5DB\Database\Migrations\Migration;
+
+class DummyClass extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('DummyTable', function (Blueprint $table) {
+            //
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('DummyTable', function (Blueprint $table) {
+            //
+        });
+    }
+}
