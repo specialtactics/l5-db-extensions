@@ -33,14 +33,14 @@ Currently these extensions provide some additional field types, and triggers.
 This is a timestamp column which will automatically update when the record is updated through the database engine.
 
 ```php
-            $table->updatedTimeStamp(FIELD_NAME);
+	$table->updatedTimeStamp(FIELD_NAME);
 ```
 
 #### Set
 This is a set data structure.
 
 ```php
-            $table->set(FIELD_NAME, ['Item1', 'Item2', 'Item3', ...]);
+	$table->set(FIELD_NAME, ['Item1', 'Item2', 'Item3', ...]);
 ```
 
 
