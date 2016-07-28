@@ -14,10 +14,14 @@ Install via composer, edit your `composer.json` to require the package. Tags are
 
 Then run `composer update` in your terminal to pull it in.
 
-Once this has finished, you will need to replace the laravel database service provider with this one in the `providers` array in `config/app.php` as follows:
+Once this has finished, you will need to add the following service providers to the `providers` array in `config/app.php` as follows:
 
 ```php
-SCM\L5DB\Database\DatabaseServiceProvider::class
+	/*
+	 * SCM L5 DB Extensions
+	 */
+	SCM\L5DB\Database\DatabaseServiceProvider::class,
+	SCM\L5DB\Database\MigrationServiceProvider::class,
 ```
 
 ## Requirements

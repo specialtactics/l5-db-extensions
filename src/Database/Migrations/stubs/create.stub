@@ -15,13 +15,19 @@ class CreateDummyClassTable extends Migration
     public function up()
     {
         Schema::create(static::TABLE_NAME, function (Blueprint $table) {
+        	// Fields
             $table->increments('_id');
             $table->uuid('_uuid');
 
+			// Timestamps
             $table->dateTime('created_at');
             $table->updatedTimeStamp('updated_at');
-            $table->primaryKey('_id');
+
+            // Keys
+            $table->primary('_id');
 			$table->index('_uuid');
+
+			// Foreign Keys
         });
 
         // Triggers
