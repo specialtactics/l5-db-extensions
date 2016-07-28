@@ -17,5 +17,5 @@ Then run `composer update` in your terminal to pull it in.
 Once this has finished, you will need to replace the laravel database service provider with this one in the `providers` array in `config/app.php` as follows:
 
 ```php
-'SCM\L5DB\Database\DatabaseServiceProvider::class'
+SCM\L5DB\Database\DatabaseServiceProvider::class
 ```

@@ -12,7 +12,7 @@ class Builder extends \Illuminate\Database\Schema\Builder
      * @param  \SCM\L5DB\Database\Schema\Blueprint  $blueprint
      * @return void
      */
-    protected function build(Blueprint $blueprint)
+    protected function build(\Illuminate\Database\Schema\Blueprint $blueprint)
     {
         $blueprint->build($this->connection, $this->grammar);
     }
