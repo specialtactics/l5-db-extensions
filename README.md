@@ -19,3 +19,45 @@ Once this has finished, you will need to replace the laravel database service pr
 ```php
 SCM\L5DB\Database\DatabaseServiceProvider::class
 ```
+
+## Requirements
+Currently this only supports MySQL/MariaDB database drivers.
+
+
+## Usage
+Currently these extensions provide some additional field types, and triggers.
+
+### Extra Field Types
+
+#### Updated Timestamp
+This is a timestamp column which will automatically update when the record is updated through the database engine.
+
+```php
+            $table->updatedTimeStamp(FIELD_NAME);
+```
+
+#### Set
+This is a set data structure.
+
+```php
+            $table->set(FIELD_NAME, ['Item1', 'Item2', 'Item3', ...]);
+```
+
+
+### Triggers
+
+#### Date Time Trigger
+This is a trigger put on the table after creation, which will ensure that anytime a record is created, this field will be set to the creation date of the record. This is useful for it's reliability.
+
+```php
+    public function up()
+    {
+		Schema::create(
+			...
+		);
+
+
+        // Created at trigger
+        $this->createDateTimeTrigger(TABLE_NAME, FIELD_NAME);
+    }
+```
