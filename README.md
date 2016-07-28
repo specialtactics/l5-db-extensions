@@ -4,11 +4,11 @@ Improved and Extended MySQL Builder & Grammar
 
 ## Installation
 
-Install via composer - edit your `composer.json` to require the package.
+Install via composer, edit your `composer.json` to require the package. Tags are meant to reflect laravel major-minor versions. Unless there are breaking changes in a laravel release, it won't be necessary to specify the latest laravel minor version.
 
 ```js
 "require": {
-    "scm/l5-db-extensions": "dev-master"
+    "scm/l5-db-extensions": "~5.2"
 }
 ```
 
