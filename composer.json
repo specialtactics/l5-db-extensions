@@ -1,0 +1,23 @@
+{
+  "name": "scm/l5-db-extensions",
+  "description": "Laravel Extended Database Functionality",
+  "keywords": ["laravel"],
+  "license": "LGPL",
+  "authors": [
+    {
+      "name": "Max Snow",
+      "email": "contact@maxsnow.me"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "illuminate/support": "~5.2",
+    "illuminate/database": "~5.2"
+  },
+  "autoload": {
+    "psr-4":
+      "SCM\\L5DB\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
